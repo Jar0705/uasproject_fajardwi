@@ -6,49 +6,44 @@ body {
 }
 
 /* Header */
-.main-header, .dashboard-header {
+.main-header {
     background: #333;
     color: #fff;
     padding: 10px 0;
     text-align: center;
 }
 
-.main-header ul, .dashboard-header nav {
+.main-header ul {
     padding: 0;
     list-style: none;
     text-align: center;
 }
 
-.main-header ul li, .dashboard-header nav a {
+.main-header ul li {
     display: inline;
     margin: 0 10px;
+}
+
+.main-header ul li a {
     color: #fff;
     text-decoration: none;
 }
 
-/* Hero Section */
-.hero-section {
-    background: #f4f4f4;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Products Section */
-.products {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-/* Login Page */
-.login-page {
+/* Login Section */
+.login-section {
     text-align: center;
     padding: 20px;
 }
 
-.login-page form {
+.login-section form {
     display: inline-block;
     text-align: left;
+}
+
+/* Dashboard Section */
+.dashboard-section {
+    text-align: center;
+    padding: 20px;
 }
 
 /* Footer */
