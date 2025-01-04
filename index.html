@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camping Packages</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+    <!-- Login Form -->
+    <div class="login-container" id="loginPage">
+        <form class="login-form" id="loginForm">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <div class="notification" id="errorMessage">Incorrect password, please try again!</div>
+            <button type="button" id="loginButton">Login</button>
+        </form>
+    </div>
+
+    <!-- Main Content -->
+    <div class="packages" id="mainContent" style="display: none;">
+        <div class="package">
+            <h3>Paket Hemat</h3>
+            <img src="images/hemat.jpg" alt="Paket Hemat" class="package-image">
+            <ul>
+                <li>Tenda untuk 2 orang</li>
+                <li>Matras</li>
+                <li>Kompor portable</li>
+            </ul>
+            <button class="order-button">Order Now</button>
+        </div>
+        <div class="package">
+            <h3>Paket Standar</h3>
+            <img src="images/standar.jpg" alt="Paket Standar" class="package-image">
+            <ul>
+                <li>Tenda untuk 4 orang</li>
+                <li>Matras</li>
+                <li>Sleeping bag</li>
+                <li>Kompor portable + gas</li>
+            </ul>
+            <button class="order-button">Order Now</button>
+        </div>
+        <div class="package">
+            <h3>Paket Eksklusif</h3>
+            <img src="images/eksklusif.jpg" alt="Paket Eksklusif" class="package-image">
+            <ul>
+                <li>Tenda untuk 6 orang</li>
+                <li>Matras premium</li>
+                <li>Sleeping bag deluxe</li>
+                <li>Kompor portable + gas</li>
+                <li>Peralatan masak lengkap</li>
+            </ul>
+            <button class="order-button">Order Now</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
