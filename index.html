@@ -3,49 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penjualan Baju Vintage</title>
+    <title>Dashboard Login - Toko Baju Vintage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="main-header">
         <div class="container">
             <h1>Toko Baju Vintage</h1>
-            <nav>
+            <nav id="dashboardMenu" style="display: none;">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#products">Produk</a></li>
                     <li><a href="#contact">Kontak</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="#" onclick="logout()">Logout</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <section id="home" class="hero-section">
-            <h2>Temukan Koleksi Baju Vintage Terbaik</h2>
-            <p>Jelajahi gaya klasik dengan sentuhan modern yang tak lekang oleh waktu.</p>
-            <a href="#products" class="btn-primary">Belanja Sekarang</a>
+        <!-- Login Section -->
+        <section id="loginSection" class="login-section">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
         </section>
-        <section id="products" class="products-section">
-            <h2>Produk Kami</h2>
-            <div class="products">
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300" alt="Baju Vintage 1">
-                    <h3>Baju Vintage 1</h3>
-                    <p>Rp 150,000</p>
-                    <button onclick="addToCart('Baju Vintage 1')">Tambah ke Keranjang</button>
-                </div>
-                <!-- More products here -->
-            </div>
-        </section>
-        <section id="contact" class="contact-section">
-            <h2>Kontak Kami</h2>
-            <p>Email: info@bajuvintage.com</p>
-            <p>Telepon: +62 812 3456 7890</p>
+
+        <!-- Dashboard Section -->
+        <section id="dashboardSection" class="dashboard-section" style="display: none;">
+            <h2>Dashboard</h2>
+            <p>Selamat datang di dashboard! Anda dapat mengelola toko Anda di sini.</p>
         </section>
     </main>
     <footer class="main-footer">
         <p>&copy; 2024 Toko Baju Vintage. Semua Hak Dilindungi.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
