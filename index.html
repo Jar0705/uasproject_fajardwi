@@ -3,45 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Login - Toko Baju Vintage</title>
+    <title>Jual Beli Pakan Burung</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(registration => console.log('Service Worker registered with scope:', registration.scope))
+                .catch(err => console.error('Service Worker registration failed:', err));
+        }
+    </script>
 </head>
 <body>
-    <header class="main-header">
-        <div class="container">
-            <h1>Toko Baju Vintage</h1>
-            <nav id="dashboardMenu" style="display: none;">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Produk</a></li>
-                    <li><a href="#contact">Kontak</a></li>
-                    <li><a href="#" onclick="logout()">Logout</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header>
+        <h1>Toko Pakan Burung</h1>
+        <p>Belanja kebutuhan pakan burung Anda di sini!</p>
     </header>
-    <main>
-        <!-- Login Section -->
-        <section id="loginSection" class="login-section">
-            <h2>Login</h2>
-            <form id="loginForm">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Login</button>
-            </form>
-        </section>
 
-        <!-- Dashboard Section -->
-        <section id="dashboardSection" class="dashboard-section" style="display: none;">
-            <h2>Dashboard</h2>
-            <p>Selamat datang di dashboard! Anda dapat mengelola toko Anda di sini.</p>
-        </section>
-    </main>
-    <footer class="main-footer">
-        <p>&copy; 2024 Toko Baju Vintage. Semua Hak Dilindungi.</p>
+    <div class="container" id="productContainer">
+        <!-- Produk akan diisi dengan JavaScript -->
+    </div>
+
+    <div class="cart" id="cart">
+        <h2>Keranjang Belanja</h2>
+        <div id="cartItems"></div>
+        <p>Total: <span id="totalPrice">0</span> IDR</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Toko Pakan Burung. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
