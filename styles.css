@@ -1,95 +1,60 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
 }
 
-.main-header {
+/* Header */
+.main-header, .dashboard-header {
     background: #333;
     color: #fff;
     padding: 10px 0;
+    text-align: center;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-nav ul {
+.main-header ul, .dashboard-header nav {
     padding: 0;
     list-style: none;
-    text-align: right;
+    text-align: center;
 }
 
-nav ul li {
+.main-header ul li, .dashboard-header nav a {
     display: inline;
-    margin-left: 15px;
-}
-
-nav ul li a {
+    margin: 0 10px;
     color: #fff;
     text-decoration: none;
 }
 
+/* Hero Section */
 .hero-section {
     background: #f4f4f4;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.btn-primary {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.products-section {
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
 }
 
+/* Products Section */
 .products {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.product-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
     padding: 20px;
-    margin: 10px;
-    text-align: center;
 }
 
-.contact-section,
-.login-section {
+/* Login Page */
+.login-page {
+    text-align: center;
     padding: 20px;
-    text-align: center;
-    background: #f4f4f4;
 }
 
-.login-section form {
+.login-page form {
     display: inline-block;
     text-align: left;
 }
 
-.login-section label,
-.login-section input,
-.login-section button {
-    display: block;
-    margin-bottom: 10px;
-}
-
+/* Footer */
 .main-footer {
     text-align: center;
     background: #333;
     color: #fff;
     padding: 10px 0;
-    margin-top: 20px;
 }
