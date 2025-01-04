@@ -40,7 +40,7 @@ function renderCart() {
     cartItems.innerHTML = '';
     let total = 0;
 
-    cart.forEach((item, index) => {
+    cart.forEach(item => {
         total += item.price;
         const itemDiv = document.createElement('div');
         itemDiv.classList.add('cart-item');
@@ -53,5 +53,37 @@ function renderCart() {
 
     document.getElementById('totalPrice').textContent = total;
 }
+
+// Fungsi Checkout
+function checkout() {
+    if (cart.length === 0) {
+        alert("Keranjang Anda kosong! Silakan tambahkan produk.");
+        return;
+    }
+
+    // Tampilkan notifikasi
+    if (Notification.permission === "granted") {
+        new Notification("Checkout Berhasil", {
+            body: `Terima kasih telah berbelanja! Total belanja: ${document.getElementById('totalPrice').textContent} IDR`,
+            icon: "https://via.placeholder.com/150"
+        });
+    } else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then(permission => {
+            if (permission === "granted") {
+                new Notification("Checkout Berhasil", {
+                    body: `Terima kasih telah berbelanja! Total belanja: ${document.getElementById('totalPrice').textContent} IDR`,
+                    icon: "https://via.placeholder.com/150"
+                });
+            }
+        });
+    }
+
+    // Reset keranjang setelah checkout
+    cart.length = 0;
+    renderCart();
+}
+
+// Event listener untuk tombol Checkout
+document.getElementById('checkoutButton').addEventListener('click', checkout);
 
 renderProducts();
