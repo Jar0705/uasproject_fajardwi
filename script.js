@@ -1,14 +1,18 @@
 // script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    const notification = document.getElementById('notification');
 
-document.getElementById('login-btn').addEventListener('click', function() {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            showNotification();
+        });
+    });
 
-    // Simple validation (replace with real authentication logic)
-    if (username === 'admin' && password === 'password') {
-        document.getElementById('login-container').style.display = 'none';
-        document.getElementById('dashboard-container').style.display = 'block';
-    } else {
-        document.getElementById('login-error').textContent = 'Invalid username or password';
+    function showNotification() {
+        notification.classList.add('visible');
+        setTimeout(() => {
+            notification.classList.remove('visible');
+        }, 2000); // Notification disappears after 2 seconds
     }
 });
