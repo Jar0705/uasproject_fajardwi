@@ -1,18 +1,8 @@
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
-    const addToCartButtons = document.querySelectorAll('.add-to-cart');
-    const notification = document.getElementById('notification');
-
-    addToCartButtons.forEach(button => {
+    const buttons = document.querySelectorAll('.item button');
+    buttons.forEach(button => {
         button.addEventListener('click', () => {
-            showNotification();
+            alert('Produk berhasil ditambahkan ke keranjang!');
         });
     });
-
-    function showNotification() {
-        notification.classList.add('visible');
-        setTimeout(() => {
-            notification.classList.remove('visible');
-        }, 2000); // Notification disappears after 2 seconds
-    }
 });
