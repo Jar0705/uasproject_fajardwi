@@ -1,35 +1,47 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Pakan Burung</title>
+    <title>Dashboard Login - Toko Baju Vintage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Toko Baju Vintage</h1>
+            <nav id="dashboardMenu" style="display: none;">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                    <li><a href="#" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Login Section -->
+        <section id="loginSection" class="login-section">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
 
-<header>
-    <h1>Toko Pakan Burung</h1>
-    <nav>
-        <ul>
-            <li><a href="#" onclick="showPage('home')">Beranda</a></li>
-            <li><a href="#" onclick="showPage('products')">Produk</a></li>
-            <li><a href="#" onclick="showPage('contact')">Kontak</a></li>
-        </ul>
-    </nav>
-</header>
-
-<div class="container">
-    <div id="content">
-        <h2>Selamat Datang di Toko Pakan Burung</h2>
-        <p>Menjual berbagai jenis pakan burung berkualitas.</p>
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2023 Toko Pakan Burung. Semua hak dilindungi.</p>
-</footer>
-
-<script src="script.js"></script>
+        <!-- Dashboard Section -->
+        <section id="dashboardSection" class="dashboard-section" style="display: none;">
+            <h2>Dashboard</h2>
+            <p>Selamat datang di dashboard! Anda dapat mengelola toko Anda di sini.</p>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <p>&copy; 2024 Toko Baju Vintage. Semua Hak Dilindungi.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
