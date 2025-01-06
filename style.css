@@ -4,16 +4,12 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-}
-
-h1, h2, p {
-    margin: 0;
-    padding: 0;
+    color: #333;
 }
 
 /* Header Section */
 header {
-    background-color: #4CAF50;
+    background-color: #ff6347; /* Tomato Color */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -37,6 +33,7 @@ nav a {
 
 nav a.active {
     text-decoration: underline;
+    color: #f9a825; /* Amber Color */
 }
 
 /* Main Section */
@@ -46,16 +43,21 @@ main {
 
 /* Product Item Styles */
 .product-item {
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 8px;
     margin: 20px 0;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
 }
 
 .product-item h2 {
-    color: #4CAF50;
+    color: #ff6347; /* Tomato Color */
     margin-bottom: 15px;
 }
 
@@ -65,28 +67,34 @@ main {
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.product-image:hover {
+    opacity: 0.8;
 }
 
 /* Button Styles */
 .button {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green Color */
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Darker Green */
 }
 
 /* Footer Section */
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #ff6347; /* Tomato Color */
     color: white;
     position: relative;
     bottom: 0;
@@ -95,15 +103,16 @@ footer {
 
 /* About Section Styles */
 .about-section {
-    background-color: white;
+    background-color: #ffffff;
     padding: 20px;
     text-align: center;
     margin: 20px 0;
     border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-section h2 {
-    color: #4CAF50;
+    color: #ff6347; /* Tomato Color */
 }
 
 .about-section p {
@@ -112,15 +121,16 @@ footer {
 
 /* Contact Section Styles */
 .contact-section {
-    background-color: white;
+    background-color: #ffffff;
     padding: 20px;
     text-align: center;
     margin: 20px 0;
     border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact-section h2 {
-    color: #4CAF50;
+    color: #ff6347; /* Tomato Color */
 }
 
 .contact-section form {
@@ -142,15 +152,16 @@ footer {
 
 .contact-section button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green Color */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .contact-section button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Darker Green */
 }
 
 /* Responsive Design */
