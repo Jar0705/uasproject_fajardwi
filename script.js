@@ -1,25 +1,30 @@
-document.getElementById('loginForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.btn');
 
-    if (username === "admin" && password === "admin123") {
-        alert("Login berhasil!");
-        showDashboard();
-    } else {
-        alert("Login gagal. Periksa username atau password Anda.");
-    }
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (button.textContent === 'Add to Cart') {
+                // Display notification
+                const notification = document.createElement('div');
+                notification.className = 'notification';
+                notification.textContent = 'Item added to cart!';
+                document.body.appendChild(notification);
+
+                // Remove notification after 3 seconds
+                setTimeout(() => {
+                    notification.remove();
+                }, 3000);
+            } else if (button.textContent === 'Send Message') {
+                alert('Thank you for contacting us!');
+            }
+        });
+    });
+
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Prevent actual form submission
+        alert('Message sent successfully!');
+        contactForm.reset(); // Clear the form fields
+    });
 });
-
-function showDashboard() {
-    document.getElementById('loginSection').style.display = 'none';
-    document.getElementById('dashboardSection').style.display = 'block';
-    document.getElementById('dashboardMenu').style.display = 'block';
-}
-
-function logout() {
-    alert("Anda telah logout.");
-    document.getElementById('dashboardSection').style.display = 'none';
-    document.getElementById('dashboardMenu').style.display = 'none';
-    document.getElementById('loginSection').style.display = 'block';
-}
