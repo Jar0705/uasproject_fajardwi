@@ -1,37 +1,44 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Pakan Burung</title>
     <link rel="stylesheet" href="style.css">
-    <title>Detail Produk - Bird Feed Store</title>
 </head>
 <body>
     <header>
-        <h1>Bird Feed Store</h1>
+        <h1>Produk Pakan Burung</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="product.html">Produk</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="product.html">Produk</a>
         </nav>
     </header>
+    
     <main>
-        <h2>Detail Produk</h2>
-        <div class="product-detail">
-            <h3>Pakan Burung Kenari</h3>
-            <p>Harga: Rp 50.000</p>
-            <p>Deskripsi: Pakan berkualitas tinggi untuk burung kenari, kaya nutrisi dan vitamin.</p>
-            <button class="button" onclick="addToCart('Pakan Burung Kenari')">Tambah ke Keranjang</button>
-        </div>
-        <div id="notification" class="notification hidden">
-            <p>Produk telah ditambahkan ke keranjang!</p>
-            <button class="close-btn" onclick="closeNotification()">×</button>
-        </div>
+        <section class="product-list">
+            <div class="product">
+                <img src="bird_food_1.jpg" alt="Pakan Burung A">
+                <h2>Pakan Burung A</h2>
+                <p>Harga: Rp 50,000</p>
+                <button onclick="addToCart('Pakan Burung A', 50000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="product">
+                <img src="bird_food_2.jpg" alt="Pakan Burung B">
+                <h2>Pakan Burung B</h2>
+                <p>Harga: Rp 75,000</p>
+                <button onclick="addToCart('Pakan Burung B', 75000)">Tambah ke Keranjang</button>
+            </div>
+            <!-- Tambahkan produk lainnya di sini -->
+        </section>
+        
+        <section class="cart">
+            <h2>Keranjang Belanja</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: Rp <span id="total-price">0</span></p>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Bird Feed Store. All rights reserved.</p>
-    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
