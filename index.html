@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bird Feed Store</title>
+    <title>Toko Pakan Burung</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Bird Feed Store</h1>
-        <div class="cart">
-            <span>Keranjang: <span id="cart-count">0</span> item</span>
-        </div>
-    </header>
-    <main>
-        <div id="product-list" class="product-list"></div>
-    </main>
-    <footer>
-        <p>&copy; 2023 Bird Feed Store</p>
-    </footer>
-    <script src="script.js"></script>
+
+<header>
+    <h1>Toko Pakan Burung</h1>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Beranda</a></li>
+            <li><a href="#" onclick="showPage('products')">Produk</a></li>
+            <li><a href="#" onclick="showPage('contact')">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <div id="content">
+        <h2>Selamat Datang di Toko Pakan Burung</h2>
+        <p>Menjual berbagai jenis pakan burung berkualitas.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 Toko Pakan Burung. Semua hak dilindungi.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
