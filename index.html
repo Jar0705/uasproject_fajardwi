@@ -3,51 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bird Feed Sales</title>
+    <title>Bird Feed Store</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Bird Feed Store</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <h1>Welcome to Bird Feed Store</h1>
     </header>
 
     <main>
-        <section id="home">
-            <h2>Welcome to Bird Feed Store</h2>
-            <p>Providing the best bird feed for your feathered friends.</p>
-        </section>
-
-        <section id="products">
-            <h2>Our Products</h2>
+        <section class="products">
             <div class="product">
-                <img src="birdseed1.jpg" alt="Bird Seed 1">
-                <h3>Premium Bird Seed</h3>
-                <p>$10.99</p>
-                <button>Add to Cart</button>
+                <img src="bird_feed1.jpg" alt="Premium Bird Feed">
+                <h2>Premium Bird Feed</h2>
+                <p>High-quality feed for all bird species.</p>
+                <p><strong>$10.99</strong></p>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
             <div class="product">
-                <img src="birdseed2.jpg" alt="Bird Seed 2">
-                <h3>Organic Bird Feed</h3>
-                <p>$15.99</p>
-                <button>Add to Cart</button>
+                <img src="bird_feed2.jpg" alt="Organic Bird Feed">
+                <h2>Organic Bird Feed</h2>
+                <p>100% natural ingredients for healthy birds.</p>
+                <p><strong>$12.99</strong></p>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: contact@birdfeedstore.com</p>
-            <p>Phone: (123) 456-7890</p>
+            <!-- Add more products as needed -->
         </section>
     </main>
 
-    <footer>
+    <div id="notification" class="notification hidden">
+        Item added to cart!
+    </div>
+
+    <footer class="footer">
         <p>&copy; 2025 Bird Feed Store. All rights reserved.</p>
     </footer>
 </body>
