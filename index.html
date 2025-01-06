@@ -4,28 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Product Page</title>
+    <title>E-Commerce Website</title>
 </head>
 <body>
     <header>
-        <h1>Product Page</h1>
+        <h1>Welcome to Our E-Commerce Store</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <div class="product-detail">
-            <img src="https://via.placeholder.com/300" alt="Product Image" class="product-image">
-            <h2>Product Name</h2>
-            <p>Price: $20.00</p>
-            <p>Description: This is a great product that you will love!</p>
-            <button class="button" onclick="addToCart()">Add to Cart</button>
-        </div>
-        <div id="notification" class="notification hidden">
-            <p>Product has been added to your cart!</p>
-            <button class="close-btn" onclick="closeNotification()">×</button>
+        <h2>Featured Products</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Price: $20.00</p>
+                <a href="product.html" class="button">View Details</a>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Price: $30.00</p>
+                <a href="product.html" class="button">View Details</a>
+            </div>
+            <div class="product-item">
+                <img src="https://via.placeholder.com/150" alt="Product 3">
+                <h3>Product 3</h3>
+                <p>Price: $25.00</p>
+                <a href="product.html" class="button">View Details</a>
+            </div>
         </div>
     </main>
     <footer>
         <p>&copy; 2025 E-Commerce Store. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
