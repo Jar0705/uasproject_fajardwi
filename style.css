@@ -93,6 +93,66 @@ footer {
     width: 100%;
 }
 
+/* About Section Styles */
+.about-section {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.about-section h2 {
+    color: #4CAF50;
+}
+
+.about-section p {
+    color: #555;
+}
+
+/* Contact Section Styles */
+.contact-section {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.contact-section h2 {
+    color: #4CAF50;
+}
+
+.contact-section form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #45a049;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .product-item {
@@ -102,5 +162,24 @@ footer {
 
     .product-image {
         height: 250px;
+    }
+
+    .about-section, .contact-section {
+        margin: 10px;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+        width: 90%;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    footer {
+        font-size: 14px;
     }
 }
