@@ -1,12 +1,19 @@
-function addToCart(productName) {
-    alert(`${productName} telah ditambahkan ke keranjang!`);
-}
+// script.js
 
-function searchProduct() {
-    const query = document.querySelector('.search-bar input').value;
-    if (query) {
-        alert(`Hasil pencarian untuk: "${query}"`);
-    } else {
-        alert('Silakan masukkan kata kunci untuk mencari produk.');
-    }
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const cartButtons = document.querySelectorAll(".product-item .btn");
+
+    cartButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            alert("Produk telah ditambahkan ke keranjang!");
+        });
+    });
+
+    const contactForm = document.querySelector(".contact form");
+
+    contactForm.addEventListener("submit", event => {
+        event.preventDefault();
+        alert("Pesan Anda telah terkirim. Terima kasih!");
+        contactForm.reset();
+    });
+});
