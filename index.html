@@ -1,74 +1,24 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Pakan Burung</title>
+    <title>Bird Feed Store</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">TokoPakanBurung</div>
-            <ul class="nav-links">
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#products">Produk</a></li>
-                <li><a href="#about">Tentang Kami</a></li>
-                <li><a href="#contact">Kontak</a></li>
-            </ul>
-            <div class="cart-icon">
-                <a href="#cart"><img src="cart-icon.png" alt="Keranjang" /></a>
-            </div>
-        </nav>
+        <h1>Bird Feed Store</h1>
+        <div class="cart">
+            <span>Keranjang: <span id="cart-count">0</span> item</span>
+        </div>
     </header>
-
-    <section id="home" class="hero">
-        <div class="hero-text">
-            <h1>Selamat Datang di Toko Pakan Burung</h1>
-            <p>Temukan berbagai jenis pakan burung terbaik untuk peliharaan Anda!</p>
-            <a href="#products" class="btn">Belanja Sekarang</a>
-        </div>
-    </section>
-
-    <section id="products" class="products">
-        <h2>Produk Kami</h2>
-        <div class="product-grid">
-            <!-- Template produk -->
-            <div class="product-item">
-                <img src="bird-food1.jpg" alt="Pakan Burung A">
-                <h3>Pakan Burung A</h3>
-                <p>Rp 50,000</p>
-                <button class="btn">Beli Sekarang</button>
-            </div>
-            <div class="product-item">
-                <img src="bird-food2.jpg" alt="Pakan Burung B">
-                <h3>Pakan Burung B</h3>
-                <p>Rp 70,000</p>
-                <button class="btn">Beli Sekarang</button>
-            </div>
-            <!-- Tambahkan produk lainnya sesuai kebutuhan -->
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <h2>Tentang Kami</h2>
-        <p>Kami adalah penyedia pakan burung berkualitas tinggi yang berkomitmen untuk memenuhi kebutuhan burung peliharaan Anda. Produk kami berasal dari bahan alami dan telah teruji keamanannya.</p>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Kontak Kami</h2>
-        <form action="#" method="POST">
-            <input type="text" name="name" placeholder="Nama" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Pesan" rows="4" required></textarea>
-            <button type="submit" class="btn">Kirim</button>
-        </form>
-    </section>
-
+    <main>
+        <div id="product-list" class="product-list"></div>
+    </main>
     <footer>
-        <p>&copy; 2025 Toko Pakan Burung. Semua Hak Dilindungi.</p>
+        <p>&copy; 2023 Bird Feed Store</p>
     </footer>
-
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
