@@ -1,43 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bird Feed Store</title>
+    <title>Toko Pakan Burung</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header class="header">
-        <h1>Welcome to Bird Feed Store</h1>
+    <header>
+        <h1>Toko Pakan Burung Berkualitas</h1>
+        <nav>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
     </header>
-
     <main>
-        <section class="products">
-            <div class="product">
-                <img src="bird_feed1.jpg" alt="Premium Bird Feed">
-                <h2>Premium Bird Feed</h2>
-                <p>High-quality feed for all bird species.</p>
-                <p><strong>$10.99</strong></p>
-                <button class="add-to-cart">Add to Cart</button>
+        <section id="beranda">
+            <h2>Selamat Datang di Toko Pakan Burung</h2>
+            <p>Kami menyediakan pakan burung berkualitas tinggi untuk kesehatan dan kebahagiaan burung peliharaan Anda.</p>
+        </section>
+        <section id="produk">
+            <h2>Produk Kami</h2>
+            <div class="produk">
+                <div class="item">
+                    <h3>Pakan Burung Lovebird</h3>
+                    <p>Rp. 50.000</p>
+                    <button>Beli Sekarang</button>
+                </div>
+                <div class="item">
+                    <h3>Pakan Burung Kenari</h3>
+                    <p>Rp. 45.000</p>
+                    <button>Beli Sekarang</button>
+                </div>
             </div>
-            <div class="product">
-                <img src="bird_feed2.jpg" alt="Organic Bird Feed">
-                <h2>Organic Bird Feed</h2>
-                <p>100% natural ingredients for healthy birds.</p>
-                <p><strong>$12.99</strong></p>
-                <button class="add-to-cart">Add to Cart</button>
-            </div>
-            <!-- Add more products as needed -->
+        </section>
+        <section id="tentang">
+            <h2>Tentang Kami</h2>
+            <p>Kami adalah penyedia pakan burung terpercaya dengan pengalaman lebih dari 10 tahun di industri ini.</p>
+        </section>
+        <section id="kontak">
+            <h2>Kontak Kami</h2>
+            <form>
+                <input type="text" placeholder="Nama Anda" required>
+                <input type="email" placeholder="Email Anda" required>
+                <textarea placeholder="Pesan Anda" required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
         </section>
     </main>
-
-    <div id="notification" class="notification hidden">
-        Item added to cart!
-    </div>
-
-    <footer class="footer">
-        <p>&copy; 2025 Bird Feed Store. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2024 Toko Pakan Burung. Semua Hak Dilindungi.</p>
     </footer>
 </body>
 </html>
