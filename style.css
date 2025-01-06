@@ -1,95 +1,78 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background: #4CAF50;
+    background-color: #4CAF50;
     color: white;
-    padding: 10px 0;
+    padding: 1em;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+nav {
+    margin-top: 1em;
 }
 
 nav a {
-    color: white;
+    margin: 0 1em;
     text-decoration: none;
+    color: white;
 }
 
 main {
-    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+.intro {
+    text-align: center;
 }
 
 .product-list {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2em;
 }
 
-.product-item {
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    width: 200px;
+.product {
+    border: 1px solid #ddd;
+    padding: 1em;
     text-align: center;
+    width: 200px;
 }
 
-.product-detail {
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
+.product img {
+    width: 100%;
+    height: auto;
 }
 
-.button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+.cart {
+    border: 1px solid #ddd;
+    padding: 1em;
+    width: 300px;
 }
 
-.button:hover {
-    background-color: #45a049;
+.cart ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart li {
+    margin-bottom: 1em;
 }
 
 .notification {
     position: fixed;
-    top: 20px;
+    bottom: 20px;
     right: 20px;
-    background-color: #333;
+    background-color: #4CAF50;
     color: white;
-    padding: 15px;
+    padding: 1em;
     border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    transition: opacity 0.5s ease;
-}
-
-.hidden {
-    display: none;
-}
-
-.close-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    position: absolute;
-    top: 5px;
-    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0.9;
 }
