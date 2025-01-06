@@ -1,39 +1,19 @@
-let cartItems = [];
-let totalPrice = 0;
+function addToCart(productName) {
+    const notification = document.getElementById('notification');
+    notification.classList.remove('hidden');
+    notification.style.opacity = '1';
+    notification.querySelector('p').innerText = `${productName} telah ditambahkan ke keranjang!`;
 
-function addToCart(productName, productPrice) {
-    cartItems.push({ name: productName, price: productPrice });
-    totalPrice += productPrice;
-    updateCart();
-    showNotification(`${productName} telah ditambahkan ke keranjang.`);
-}
-
-function updateCart() {
-    const cartItemsList = document.getElementById('cart-items');
-    const totalPriceElement = document.getElementById('total-price');
-    
-    // Clear current cart items
-    cartItemsList.innerHTML = '';
-
-    // Add items to cart
-    cartItems.forEach(item => {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${item.name} - Rp ${item.price}`;
-        cartItemsList.appendChild(listItem);
-    });
-
-    // Update total price
-    totalPriceElement.textContent = totalPrice;
-}
-
-function showNotification(message) {
-    const notification = document.createElement('div');
-    notification.className = 'notification';
-    notification.textContent = message;
-    
-    document.body.appendChild(notification);
-    
+    // Otomatis sembunyikan notifikasi setelah 3 detik
     setTimeout(() => {
-        notification.remove();
-    }, 3000); // Notifikasi akan hilang setelah 3 detik
+        closeNotification();
+    }, 3000);
+}
+
+function closeNotification() {
+    const notification = document.getElementById('notification');
+    notification.style.opacity = '0';
+    setTimeout(() => {
+        notification.classList.add('hidden');
+    }, 500); // Sesuaikan durasi ini dengan durasi transisi CSS
 }
