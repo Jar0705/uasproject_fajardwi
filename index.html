@@ -3,43 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jual Beli Pakan Burung</title>
+    <title>Bird Feed Sales</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js')
-                .then(registration => console.log('Service Worker registered with scope:', registration.scope))
-                .catch(err => console.error('Service Worker registration failed:', err));
-        }
-    </script>
 </head>
 <body>
-    <header>
-        <h1>Toko Pakan Burung</h1>
-        <p>Belanja kebutuhan pakan burung Anda di sini!</p>
-    </header>
-
-    <div class="container" id="productContainer">
-        <!-- Produk akan diisi dengan JavaScript -->
-    </div>
-    
-    <div class="cart" id="cart">
-        <h2>Keranjang Belanja</h2>
-        <div id="cartItems"></div>
-        <p>Total: <span id="totalPrice">0</span> IDR</p>
-        <button id="checkoutButton">Checkout</button>
+    <div id="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button" id="login-btn">Login</button>
+        </form>
+        <p id="login-error" class="error"></p>
     </div>
 
-    <div class="cart" id="cart">
-        <h2>Keranjang Belanja</h2>
-        <div id="cartItems"></div>
-        <p>Total: <span id="totalPrice">0</span> IDR</p>
-    </div>
+    <div id="dashboard-container" style="display: none;">
+        <header>
+            <h1>Bird Feed Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <footer>
-        <p>&copy; 2025 Toko Pakan Burung. All rights reserved.</p>
-    </footer>
+        <main>
+            <section id="home">
+                <h2>Welcome to Bird Feed Store</h2>
+                <p>Providing the best bird feed for your feathered friends.</p>
+            </section>
+
+            <section id="products">
+                <h2>Our Products</h2>
+                <div class="product">
+                    <img src="birdseed1.jpg" alt="Bird Seed 1">
+                    <h3>Premium Bird Seed</h3>
+                    <p>$10.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="birdseed2.jpg" alt="Bird Seed 2">
+                    <h3>Organic Bird Feed</h3>
+                    <p>$15.99</p>
+                    <button>Add to Cart</button>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <p>Email: contact@birdfeedstore.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Bird Feed Store. All rights reserved.</p>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
