@@ -4,113 +4,85 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-#login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f3f3f3;
-}
-
-#login-container h1 {
-    margin-bottom: 20px;
+    background-color: #f9f9f9;
     color: #333;
 }
 
-#login-form {
-    width: 300px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#login-form label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-#login-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#login-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
+.header {
+    background-color: #4CAF50;
     color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    text-align: center;
+    padding: 1rem 0;
 }
 
-#login-btn:hover {
-    background-color: #0056b3;
-}
-
-.error {
-    color: red;
-    font-size: 0.9em;
-}
-
-#dashboard-container {
-    font-family: Arial, sans-serif;
-}
-
-header {
-    background-color: #007BFF;
-    color: white;
-    padding: 15px;
-}
-
-header h1 {
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
+.products {
     display: flex;
-    gap: 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-main {
-    padding: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem;
 }
 
 .product {
-    display: inline-block;
-    width: 200px;
-    margin: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
     text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
-    background-color: #f9f9f9;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .product img {
-    width: 100%;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 10px;
+    max-width: 100%;
+    border-radius: 5px;
 }
 
-footer {
+.product h2 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.product p {
+    margin: 0.5rem 0;
+}
+
+.product button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #45a049;
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.notification.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.footer {
     text-align: center;
-    padding: 10px;
+    padding: 1rem 0;
     background-color: #f1f1f1;
+    margin-top: 2rem;
 }
